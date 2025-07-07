@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do You Love Me?</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(135deg, #ffe1f5, #ffc9e3);
+      text-align: center;
+      padding-top: 100px;
+      color: #ff69b4;
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+    }
+    button {
+      font-size: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background-color: #ff8ebf;
+      color: white;
+      cursor: pointer;
+      position: relative;
+    }
+    #noBtn {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h2>Do you love me? 😚</h2>
+  <a href="page4.html"><button>Yes 💕</button></a>
+  <button id="noBtn" onmouseover="moveNo()">No 😢</button>
+
+  <script>
+    function moveNo() {
+      const btn = document.getElementById('noBtn');
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+      btn.style.left = `${x}px`;
+      btn.style.top = `${y}px`;
+    }
+  </script>
+</body>
+</html>
